@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" type="text/css" href="Tabla .css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src= "Tabla.js"></script> 
+    <title>Inventario</title>
+    <link rel="icon" href="tablas.ico">
+</head>
+<body>
+    <header>
+<h1>Sistema de Inventarios</h1>
+    </header>
+    <div class="contenedor">
+    <div class="formulario">
+        <h3>Formulario</h3>
+    <form>
+        <div>
+            <b>
+                Código
+            </b>
+            <input type="number" id="codigo">
+        </div>
+       <div>
+        <b>
+            Elemento
+        </b>
+        <input type="text" id="elemento">
+       </div>
+        <div>
+            <b>
+                Costo
+            </b>
+            <input type="number" id="costo" required>
+        </div>
+        <div>
+            <b>
+                Fecha
+            </b>
+            <input type="date" id="fecha">
+        </div>
+        <div>
+            <input type="button" value="Enviar" onclick="enviartabla()">
+        </div> 
+        <div>
+            <b>
+               ¿Desea eliminar una fila?<br><br>
+            </b>
+            <input type="button" value="Eliminar Fila" onclick="eliminar()">
+        </div>
+        <div>
+            <b>
+                ¿Desea modificar los datos de una fila?<br><br>
+             </b>
+            <input type="button" value="Editar Información" onclick="cambiar()">
+        </div>
+        <div>
+            Monica Giselle Rivera Trujillo
+        </div>
+        <div class="fecha">
+            <div id="clock" class="topcorner"> 
+        </div>       
+    </form>
+    </div>
+    </div>
+    <div class="divtabla">
+    <table id="tabla" style="width:100%">
+        <caption>Registro de Datos</caption>|
+        <thead>
+            <tr>
+            <th>Código</th>
+            <th>Elemento</th>
+            <th>Costo</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2" id="contador">
+            </td>
+            <td colspan="2" id="totalcostos">
+            </td>
+        </tr>
+    </tfoot>
+      </table>
+    </div>
+</div>
+<footer>
+
+</footer>
+</body>
+</html>
